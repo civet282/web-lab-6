@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smiley face</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="800" height="800" style="border: 1px solid green;"></canvas>
+
+    <script>
+        // Get canvas and context
+        var canvas = document.getElementById("mycanvas");
+        var context = canvas.getContext("2d");
+
+        function drawSmileyFace(){
+            // Clear canvas and draw light green background
+            context.clearRect(0, 0, 800, 800);
+            context.fillStyle = "lightgreen";
+            context.fillRect(0,0,800,800);
+
+            // Draw face (yellow circle)
+            context.beginPath();
+            context.arc(400,350,300,0,Math.PI*2);
+            context.fillStyle = "yellow";
+            context.fill();
+            context.strokeStyle = '#D4AF37';
+            context.lineWidth = 6;
+            context.stroke();
+
+            // Draw left eye
+            context.beginPath();
+            context.arc(300,270,40,0,Math.PI*2);
+            context.fillStyle = "white";
+            context.fill();
+            context.strokeStyle = 'black';
+            context.lineWidth = 4;
+            context.stroke();
+
+            // Draw left eye pupil
+            context.beginPath();
+            context.arc(300,270,20,0,Math.PI*2);
+            context.fillStyle = "black";
+            context.fill();
+            
+            // Draw right eye
+            context.beginPath();
+            context.arc(500,270,40,0,Math.PI*2);
+            context.fillStyle = "white";
+            context.fill();
+            context.strokeStyle = "black";
+            context.lineWidth = 4;
+            context.stroke();
+
+            // Draw right eye pupil
+            context.beginPath();
+            context.arc(500, 270, 20, 0, Math.PI * 2);
+            context.fillStyle = "black";
+            context.fill();
+            
+            // Draw smiling mouth
+            context.beginPath();
+            context.arc(400, 390, 130, 0, Math.PI);
+            context.strokeStyle = "black";
+            context.lineWidth = 16;
+            context.stroke();
+            
+            // Draw text
+            context.font = 'bold 48px Arial';
+            context.fillStyle = "brown";
+            context.textAlign = 'center';
+            context.fillText('The Canvas brought me to life！', 400, 750);
+        }
+
+        // Call function to draw the smiley face
+        drawSmileyFace();
+    </script>
+</body>
+</html>
