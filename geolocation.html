@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        button{
+            background: rgb(159, 228, 159);
+            color: rgb(138, 38, 38);
+            border: none;
+            padding: 10px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button:hover{
+            background: yellow;
+        }
+
+        #geolocation{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h3>Click the button to get your coordinates:</h1>
+    <button onclick="getGeolocation()">Get Geolocation</button>
+    <p id = "geolocation"></p>
+
+    <script src  = "geolocation.js"></script>
+</body>
+</html>
